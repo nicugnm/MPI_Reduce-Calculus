@@ -108,7 +108,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    // procesul cu my_rank = 0 primeste valoarea numitorului, calculeaza rezultatul si il scrie intr-un fișier
+    // procesul cu my_rank = 0 primeste valoarea numitorului, calculeaza rezultatul si il scrie intr-un fisier
     if (my_rank == 0) {
         MPI_Recv(&denominator, 1, MPI_FLOAT, nproc_per_group, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
         float result = numerator / denominator;
